@@ -1,0 +1,105 @@
+// 所有的colors
+$store_main:#09BB07 !default;//主色调
+$store_main_bg:#E8E8ED !default;//主色调
+$store_disabled:#9DE49C !default;// 按钮 disabled
+$store_fff:#fff !default;
+$store_999:#999 !default;
+$store_eee:#eee !default;
+$store_666:#666 !default;
+$store_e3e3e3:#e3e3e3 !default;
+$store_f6f6f6:#f6f6f6 !default;
+$store_3699ff: #3699ff !default;
+$store_333: #333 !default;
+$store-ececec: #ececec !default;
+$store_aaa: #aaa !default;
+$store_ff4000: #ff4000 !default;
+$store_ffece6: #ffece6 !default;
+$store_f63: #f63 !default;
+$store_ccc: #ccc !default;
+$store_ffbe00: #ffbe00 !default;
+$store_f8f8f8: #f8f8f8 !default;
+$store_1aad19: #1aad19 !default;
+$store_e93131: #e93131 !default;
+$store_d6d5d6: #d6d5d6 !default;
+$store_00bbee: #00bbee !default;
+$store_e8e8ed: #e8e8ed !default;
+$store_000: #000 !default;
+$store_222: #222 !default;
+$store_007aff: #007aff !default;
+$store_fc5318: #fc5318 !default;
+$store_029400: #029400 !default;
+$store-f6f1e8: #f6f1e8 !default;
+$store-00c200: #00c200 !default;
+$store-d2d3d5: #d2d3d5 !default;
+$store-e8e8e8: #e8e8e8 !default;
+$store-fefefc: #fefefc !default;
+$store-c1f2ff: #c1f2ff !default;
+$store-fb8354: #fb8354 !default;
+$store-9d9a9b: #9d9a9b !default;
+$store-f6e1e8: #f6e1e8 !default;
+$store-e81f1f: #e81f1f !default;
+$store-051c3c: #051c3c !default;
+$store-f0292d: #f0292d !default;
+$store-499ffb: #499ffb !default;
+
+
+
+@mixin position_a($top: 0, $right:0, $bottom:0, $left:0) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin position_a_h($top: 0, $left:0, $width:0, $height:0) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  width: $width;
+  height: $height;
+}
+
+// 清除浮动
+
+@mixin clearFix (){
+  .clearfix:before,.clearfix:after{display:table;content:"";}
+  .clearfix:after{clear:both;}
+
+  .clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+  .clearfix{display:inline-block;}
+  html[xmlns] .clearfix{display:block;}
+  * html .clearfix{height:1%;}
+
+  .clearfix{*zoom: 1;}
+  .clearfix:after{clear:both;display:table;content:"";}
+
+  .clearfix{overflow:hidden;_zoom:1;}
+}
+
+
+// 任意角度的箭头
+// https://juejin.im/post/5a9c99c4f265da23906b7c98
+@mixin rightArrows(){
+  display: inline-block;
+  margin: 72px;
+  border-top: 24px solid;
+  border-right: 24px solid;
+  width: 120px;
+  height: 120px;
+  transform: rotate(45deg);
+}
+// 单行省略号
+@mixin singleEllipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+// 多少行省略号
+@mixin lineClamp($value:2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $value;
+  -webkit-box-orient: vertical;
+}

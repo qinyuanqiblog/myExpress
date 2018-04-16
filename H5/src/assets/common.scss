@@ -1,0 +1,18 @@
+.container {
+  @include position_a();
+   background-color:$store_fff;
+ }
+
+.submit-button{
+  display: block;
+  width: 90%;
+  height: 0.88rem;
+  line-height: 0.88rem;
+  border-radius: 0.1rem;
+  color: $store_fff;
+  background-color: $store_main;
+}
+
+.submit-disable{
+  background-color:$store_disabled !important;
+}
